@@ -1,0 +1,11 @@
+<%- include ('partials/header.ejs') %>
+<div class="container">
+    <h1> Daily Journal </h1>
+    <p> <%= homecontent %></p>
+    <% for (let i=0; i< newcontent.length; i++){%>
+    
+    <h5 class="titletag"> <%= newtitle[i] %> </h5>   
+    <p> <%= newcontent[i].substring(0, 100)+ "..." %> <a href="/posts/<%= newtitle[i].toLowerCase()%>"> Read more </a> </p> 
+    <% } %>
+</div>
+<%- include ('partials/footer.ejs') %>
