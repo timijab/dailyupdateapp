@@ -14,7 +14,7 @@ blogschema = mongoose.Schema({
     post: [String]
 });
 
-mongoose.connect('mongodb+srv://admin-isaac:Test123@cluster0.rfa5zq9.mongodb.net/posts').catch(function(err){console.log(err);});
+mongoose.connect('mongodb+srv://<clustername:password>@cluster0.rfa5zq9.mongodb.net/posts').catch(function(err){console.log(err);});
 const post = mongoose.model('blogpost', blogschema);
 
 const first_post = new post({title:['My first entry'], post:['This is my first post on the blog website, this is going to be a collection of my thoughts and truth. If you come across this please read and enjoy.']});
